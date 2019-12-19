@@ -2,7 +2,6 @@ package com.reportsweatherandnetwork.network
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
@@ -18,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         enqueueButton.setOnClickListener {
             val perioReq = PeriodicWorkRequest.Builder(NetworkWorker::class.java, 16, TimeUnit.MINUTES).build()
             WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork("com.reportsweatherandnetwork.network.networkworker", ExistingPeriodicWorkPolicy.REPLACE, perioReq)
-
-            Log.v("MyLogs", "Worker enqueued")
         }
     }
 }
