@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         enqueueButton.setOnClickListener {
-            val perioReq = PeriodicWorkRequest.Builder(NetworkWorker::class.java, 16, TimeUnit.MINUTES).build()
+            val perioReq = PeriodicWorkRequest.Builder(NetworkWorker::class.java, 2, TimeUnit.HOURS).build()
             WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork("com.reportsweatherandnetwork.network.networkworker", ExistingPeriodicWorkPolicy.REPLACE, perioReq)
         }
     }
