@@ -26,6 +26,7 @@
 		ED5CC22723AC98CA00748622 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED5CC22A23AC98CA00748622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED5CC22C23AC98CA00748622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED5CC23223AC9A4700748622 /* Dashboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dashboard.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		ED5CC21A23AC98C900748622 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				ED5CC23223AC9A4700748622 /* Dashboard.entitlements */,
 				ED5CC21B23AC98C900748622 /* AppDelegate.swift */,
 				ED5CC21D23AC98C900748622 /* SceneDelegate.swift */,
 				ED5CC22223AC98C900748622 /* ContentView.swift */,
@@ -288,7 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dashboard/Dashboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Dashboard/Preview Content\"";
 				DEVELOPMENT_TEAM = JMZ49LHPT6;
 				ENABLE_PREVIEWS = YES;
@@ -299,6 +303,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.reportsweatherandnetwork.Dashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -308,7 +313,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dashboard/Dashboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Dashboard/Preview Content\"";
 				DEVELOPMENT_TEAM = JMZ49LHPT6;
 				ENABLE_PREVIEWS = YES;
@@ -319,6 +326,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.reportsweatherandnetwork.Dashboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
